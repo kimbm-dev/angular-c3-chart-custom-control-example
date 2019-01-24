@@ -30,7 +30,7 @@ chart = c3.generate({
 
 ## feature
 
-[] 範囲指定するときsubchartが選択されてないように見えることをなんとかしたい
+[ ] 範囲指定するときsubchartが選択されてないように見えることをなんとかしたい
 ```
  chart.unzoom() < -- こいつのせい
  
