@@ -1,26 +1,43 @@
-<mat-card>
-  <p style="background-color: silver; padding: 10px 10px;">
-    サブチャートで選択した時、
-    Chart1はC3のデフォルト挙動です。
-    Chart2はサブチャートを選択する時選択された範囲が2つの拠点をまたがる場合のみ
-    zoom処理を行います。
-    <br/>
-    TODO: サブチャートの選択範囲も2つの拠点ではないと選択された処理をしない
-  </p>
-<div>
-    <h2> Chart 1 </h2>
+<section fxFlex.gt-xs="10px"
+fxFlexOrder.gt-xs="10px"
+fxFlexOffset.gt-xs="10px"
+fxFlexAlign.gt-xs="start"
+fxLayoutGap="30px">
+  <mat-card>
     <pre>
-      <div id="chart1"></div>
+      <h3>サブチャートで選択した時、カスタムアクション</h3>
     </pre>
-  </div>
-</mat-card>
-
-<mat-card>
-  <div>
-    <h2> Chart 2 </h2>
-    <pre>
-      2つ以上を選択した場合
-      <div id="chart2"></div>
-    </pre>
-  </div>
-</mat-card>
+  </mat-card>
+  <mat-card>
+    <div>
+      <h2> Chart 1 </h2>
+      <pre>
+        <h3>デフォルトの挙動を使う</h3>
+        拠点がxのデータが１つでも含まれている場合は拡大する
+        <code>
+          C3.generateのオプション付けで可能
+        </code>
+      </pre>
+      <div fxFlex="60" id="chart1"></div>
+    </div>
+  </mat-card>
+  
+  <mat-card>
+    <div>
+      <h2> Chart 2 </h2>
+      <pre>
+        <pre>
+          <h3>カスタムアクション</h3>
+          拠点がxのデータが2以上を含まれている場合は拡大する
+          <code>
+            デフォルトの挙動とは違うため、
+            2つ以上が選択されているかそうではないかの判断式が必要です。
+            実際拡大し2つの以上の選択されたデータがない場合、サブチャートの
+            選択範囲が表示できない問題があります。
+          </code>
+        </pre>
+        <div id="chart2"></div>
+      </pre>
+    </div>
+  </mat-card>
+</section>

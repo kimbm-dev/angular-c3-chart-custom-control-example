@@ -38,7 +38,7 @@ export class AppComponent  {
       subchart: {
         show: true,
         onbrush: (d) => {
-          if (d[1] - d[0] < 2 && this.chart2) {
+          if (d[1] - d[0] < 1.1 && this.chart2) {
             this.chart2.unzoom();
           }else {
             //
